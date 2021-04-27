@@ -1,6 +1,6 @@
-@include("stylesheet");
+@include("stylesheet")
         <div class="dashboard-main-wrapper">
-               @include("navbar");
+               @include("navbar")
             <div class="dashboard-wrapper" >
                 <div class="dashboard-ecommerce">
                     <div class="container-fluid dashboard-content ">
