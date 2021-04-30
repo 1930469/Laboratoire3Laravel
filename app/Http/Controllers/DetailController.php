@@ -15,10 +15,9 @@ class DetailController extends Controller
     public function __invoke($id)
     {
         //$data = config("app.listeproduit")[$id-1];
-        $data = Produit::find($id);
-        if(Produit::where('id',$id)->exists())
-        {
-            return view('produit',$data->getAttributes());
+        $data = Produit::where('id',$id);
+        if($data->exists()){
+            return view('produit',$data->get()->getAttributes());
         }
         else
         {
